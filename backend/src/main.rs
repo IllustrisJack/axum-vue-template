@@ -1,4 +1,4 @@
-use axum::{routing::get, Json, Router, http::header::CONTENT_TYPE};
+use axum::{routing::get, Json, Router, http::header::CONTENT_TYPE, extract::Path};
 use std::net::SocketAddr;
 
 #[tokio::main]
@@ -9,7 +9,7 @@ async fn main() {
     ];
 
     let app = Router::new()
-        .route("/", get(handler))
+        .merge(routes_hello())
         .layer(
             tower_http::cors::CorsLayer::new()
                 .allow_origin(origins)
@@ -27,6 +27,12 @@ async fn main() {
         .expect("Failed to start server");
 }
 
+fn routes_hello() -> Router {
+	Router::new()
+		.route("/hello", get(handler))
+		.route("/hello/:name", get(handler2))
+}
+
 #[derive(serde::Serialize)]
 struct Message {
     message: String,
@@ -35,5 +41,11 @@ struct Message {
 async fn handler() -> Json<Message> {
     Json(Message {
         message: String::from("Hello, World!"),
+    })
+}
+
+async fn handler2(Path(name): Path<String>) -> Json<Message> {
+    Json(Message {
+        message: String::from(format!("Hello, {name}!"))
     })
 }
