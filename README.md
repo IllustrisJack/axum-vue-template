@@ -4,6 +4,7 @@
 - [Vite](https://vitejs.dev/)
 ## Prerequisites:
 - [Rust](https://www.rust-lang.org/)
+- [Cargo Watch](https://crates.io/crates/cargo-watch) ```cargo install cargo-watch```
 - [pnpm](https://pnpm.io/)
 ## Development
 Serve via ```pnpm dev``` in /frontend/
