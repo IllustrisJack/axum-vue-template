@@ -20,13 +20,13 @@ async function getMessage() {
     </h1>
   </div>
   <p>Hello World!</p>
-  <div v-if="message">
+  <div style="color:greenyellow" v-if="message">
     Received: {{ message }}
   </div>
-  <div v-else>
+  <div style="color:orange" v-else>
     No message
   </div>
-  <button @click="getMessage()">Get message</button>
+  <button class="button" @click="getMessage()">GET MESSAGE</button>
 </template>
 
 <style scoped>
@@ -34,6 +34,13 @@ async function getMessage() {
   display: inline-block;
   align-items: center;
   justify-content: center
+}
+
+.button {
+  margin: 20px 0 0 0;
+  font-weight: 700;
+  color: #0f0e1f;
+  background-color: white;
 }
 
 img {
