@@ -4,6 +4,7 @@
 - [Cargo Watch](https://crates.io/crates/cargo-watch) ```cargo install cargo-watch```
 - [pnpm](https://pnpm.io/)
 ## Development
+Install dependencies via ```pnpm install```in /frontend/
 Serve via ```pnpm dev``` in /frontend/
 ## Build
 Build via ```pnpm build``` in /frontend/
