@@ -1,7 +1,4 @@
-# Axum + Vue.js 3 + Vite Template
-- [Axum](https://github.com/tokio-rs/axum)
-- [Vue](https://vuejs.org/)
-- [Vite](https://vitejs.dev/)
+# [Axum](https://github.com/tokio-rs/axum) + [Vue.js 3](https://vuejs.org/) + [Vite](https://vitejs.dev/) Template
 ## Prerequisites:
 - [Rust](https://www.rust-lang.org/)
 - [Cargo Watch](https://crates.io/crates/cargo-watch) ```cargo install cargo-watch```
@@ -11,7 +8,8 @@ Serve via ```pnpm dev``` in /frontend/
 ## Build
 Build via ```pnpm build``` in /frontend/
 
-![grafik](https://github.com/IllustrisJack/axum-vue-template/assets/76592751/9a7e90ac-5d0a-4b5f-bc86-42f361bd3ffa)
+![grafik](https://github.com/IllustrisJack/axum-vue-template/assets/76592751/8cf81597-f5fb-4b7f-8d35-3f419eabe0bc)
+
 
 
 
