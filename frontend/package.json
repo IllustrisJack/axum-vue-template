@@ -1,0 +1,25 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:*\"",
+    "dev:frontend": "vite --port 3000",
+    "dev:backend": "cargo watch -C ../backend -x run",
+    "build": "concurrently \"npm:build:*\"",
+    "build:frontend": "vue-tsc && vite build",
+    "build:backend": "cargo build --manifest-path=../backend/Cargo.toml --release",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9",
+    "vue-tsc": "^1.4.2"
+  }
+}
