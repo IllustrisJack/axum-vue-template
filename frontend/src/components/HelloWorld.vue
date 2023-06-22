@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import viteUrl from '../assets/vite.svg'
 import vueUrl from '../assets/vue.svg'
 const message = ref(null);
 
@@ -16,7 +15,7 @@ async function getMessage() {
     <h1 style="font-size:48px">
       Rust &#129408;
       + Vue <img :src="vueUrl" alt="vueLogo"/>
-      + Vite <img :src="viteUrl" alt="viteLogo"/>
+      + Vite <img src=vite.svg alt="viteLogo"/>
     </h1>
   </div>
   <p>Hello World!</p>
